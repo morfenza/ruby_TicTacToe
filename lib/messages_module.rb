@@ -2,6 +2,16 @@
 
 # Module to define helper methods that ask for values
 module Messages
+  def self.welcome_message
+    puts 'Hello and welcome! This is a simple TicTacToe game!'
+    puts 'Call a friend and play!'
+  end
+
+  def self.play_again?
+    puts 'Play again? (y/n)'
+    gets.chomp == 'y'
+  end
+
   def ask_name(num)
     puts "\nPlayer #{num}, write your name"
     gets.chomp
@@ -18,7 +28,7 @@ module Messages
   end
 
   def finish_game(player)
-    puts "\n\n\t Congratulations #{player.name}! You've won!"
+    puts "\n\n\t Congratulations #{player.name}! You've won!\n\n"
     :finish
   end
 end
