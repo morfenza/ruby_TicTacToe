@@ -19,12 +19,15 @@ class Game
   def play_round(board, player)
     board.insert_symbol(player.symbol, ask_space(player) - 1)
     puts board.display_board
-    check_victory(board, player)
+    return finish_game(player) if check_victory(board).eql?(player.symbol)
   end
 
-  def check_victory(board, player); end
+  def check_victory(board)
+    Board::WINNING_LINES.each do |line|
+      if board.spaces[line[0]] == board.spaces[line[1]] &&
+         board.spaces[line[0]] == board.spaces[line[2]]
+        return board.spaces[line[0]]
+      end
+    end
+  end
 end
-
-g = Game.new
-g.play_round(g.board, g.player2)
-g.play_round(g.board, g.player2)
