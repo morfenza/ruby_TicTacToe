@@ -18,7 +18,7 @@ class Board
     spaces[space] = symbol
   end
 
-  def show_board
+  def display_board
     <<~BOARD
 
       #{@spaces[0]} | #{@spaces[1]} | #{@spaces[2]}
