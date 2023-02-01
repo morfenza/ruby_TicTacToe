@@ -4,7 +4,7 @@ Project: Tic Tac Toe, from [The Odin Project](https://www.theodinproject.com/abo
 I created a Tic Tac Toe game using Ruby so you can play it in the console!
 
 ## Links
-- [Play the game on Replit!]()
+- [Play the game on Replit!](https://replit.com/@morfenza/rubyTicTacToe?v=1)
 - [Link to the assignment](https://www.theodinproject.com/lessons/ruby-tic-tac-toe)
 
 ## Playing Locally
