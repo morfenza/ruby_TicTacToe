@@ -16,4 +16,9 @@ module Messages
     puts "\n#{player.name} select the space to put your symbol! (1..9)"
     gets.chomp[0].to_i
   end
+
+  def finish_game(player)
+    puts "\n\n\t Congratulations #{player.name}! You've won!"
+    :finish
+  end
 end
