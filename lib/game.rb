@@ -10,10 +10,10 @@ class Game
 
   attr_reader :player1, :player2
 
-  def initialize
-    @player1 = Player.new(ask_name(1), ask_symbol)
-    @player2 = Player.new(ask_name(2), ask_symbol)
-    @board = Board.new
+  def initialize(player1 = Player.new(ask_name(1), ask_symbol), player2 = Player.new(ask_name(2), ask_symbol), board = Board.new)
+    @player1 = player1
+    @player2 = player2
+    @board = board
     puts @board.display_board
   end
 
